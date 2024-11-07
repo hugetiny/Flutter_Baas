@@ -155,8 +155,8 @@ async function generateTable(publisher) {
         }
 
         let tableContent = `### [${publisher.title}](${publisher.docBase})\n\n`;
-        tableContent += `| Name | pub.dev | View Source | Android | iOS | Web | MacOS | Windows | Linux |\n`;
-        tableContent += `| ---- | ------- | ----------- | ------- | --- | --- | ----- | ------- | ----- |\n`;
+        tableContent += `| pub.dev | View Source | Android | iOS | Web | MacOS | Windows | Linux |\n`;
+        tableContent += `| ------- | ----------- | ------- | --- | --- | ----- | ------- | ----- |\n`;
 
         for (const pkg of packages) {
             const platforms = new Set(pkg.platforms.split(', '));
@@ -173,7 +173,7 @@ async function generateTable(publisher) {
             const pubDevBadge = `[![${pkg.name} pub.dev badge](https://img.shields.io/pub/v/${pkg.name}.svg)](https://pub.dev/packages/${pkg.name})`;
             const viewSource = `[\`${pkg.name}\`](${publisher.sourceBase}${pkg.name})`;
 
-            tableContent += `| ${pkg.name} | ${pubDevBadge} | ${viewSource} | ${platformSupport.Android} | ${platformSupport.iOS} | ${platformSupport.web} | ${platformSupport.macOS} | ${platformSupport.Windows} | ${platformSupport.Linux} |\n`;
+            tableContent += `| ${pubDevBadge} | ${viewSource} | ${platformSupport.Android} | ${platformSupport.iOS} | ${platformSupport.web} | ${platformSupport.macOS} | ${platformSupport.Windows} | ${platformSupport.Linux} |\n`;
         }
 
         console.log(`Preview of generated table content:\n${tableContent.slice(0, 200)}...`);
