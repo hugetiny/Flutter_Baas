@@ -1,0 +1,13 @@
+./appwrite-sdk
+./pocketbase-sdk
+./supabase-sdk
+
+**/node_modules/
+
+
+pubspec.lock
+
+
+js-tools/pnpm-lock.yaml
+js-tools/aws_crawl.js
+js-tools/raw
