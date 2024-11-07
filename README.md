@@ -37,7 +37,6 @@ This project organizes the BaaS (Backend as a Service) platforms and their plugi
 ### AWS Amplify
 - Advantages:
   - Integration with AWS ecosystem
-  - Enterprise-level support
 - Disadvantages:
   - Flutter plugin maintenance is not proactive
   - Not available in some countries and regions
@@ -102,16 +101,7 @@ The absence of certain features does not imply weakness in BaaS capabilities, as
 | supabase_flutter | [![supabase_flutter pub.dev badge](https://img.shields.io/pub/v/supabase_flutter.svg)](https://pub.dev/packages/supabase_flutter) | [`supabase_flutter`](https://github.com/supabase/supabase-flutter/tree/main/packages/supabase_flutter) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | yet_another_json_isolate | [![yet_another_json_isolate pub.dev badge](https://img.shields.io/pub/v/yet_another_json_isolate.svg)](https://pub.dev/packages/yet_another_json_isolate) | [`yet_another_json_isolate`](https://github.com/supabase/supabase-flutter/tree/main/packages/yet_another_json_isolate) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 
-### [AWS Amplify Plugins](https://docs.amplify.aws/flutter)
-| Name | pub.dev | View Source | Android | iOS | Web | MacOS | Windows | Linux |
-| ---- | ------- | ----------- | ------- | --- | --- | ----- | ------- | ----- |
-| Analytics | [![analytics pub.dev badge](https://img.shields.io/pub/v/analytics.svg)](https://pub.dev/packages/analytics) | [analytics](https://pub.dev/packages/analytics) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| API (REST) | [![api__rest_ pub.dev badge](https://img.shields.io/pub/v/api__rest_.svg)](https://pub.dev/packages/api__rest_) | [api__rest_](https://pub.dev/packages/api__rest_) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| API (GraphQL) | [![api__graphql_ pub.dev badge](https://img.shields.io/pub/v/api__graphql_.svg)](https://pub.dev/packages/api__graphql_) | [api__graphql_](https://pub.dev/packages/api__graphql_) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Authentication | [![authentication pub.dev badge](https://img.shields.io/pub/v/authentication.svg)](https://pub.dev/packages/authentication) | [authentication](https://pub.dev/packages/authentication) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| DataStore | [![datastore pub.dev badge](https://img.shields.io/pub/v/datastore.svg)](https://pub.dev/packages/datastore) | [datastore](https://pub.dev/packages/datastore) | ✔ | ✔ | N/A | N/A | N/A | N/A |
-| Storage | [![storage pub.dev badge](https://img.shields.io/pub/v/storage.svg)](https://pub.dev/packages/storage) | [storage](https://pub.dev/packages/storage) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Notifications | [![notifications pub.dev badge](https://img.shields.io/pub/v/notifications.svg)](https://pub.dev/packages/notifications) | [notifications](https://pub.dev/packages/notifications) | ✔ | ✔ | N/A | N/A | N/A | N/A |
+<!-- ### [AWS Amplify Plugins](https://docs.amplify.aws/flutter) -->
 
 ## Future Plans
 

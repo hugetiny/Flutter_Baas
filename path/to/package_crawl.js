@@ -108,30 +108,27 @@ function processPackageInfo(packageName, pubspec) {
 
 // Method to write to README
 async function writeToReadme(content, title) {
-    const readmePaths = ['../README.md', '../README_CN.md']; // Update both English and Chinese README files
+    const readmePath = '../README.md';
+    let readmeContent = fs.readFileSync(readmePath, 'utf-8');
 
-    for (const readmePath of readmePaths) {
-        let readmeContent = fs.readFileSync(readmePath, 'utf-8');
-
-        const pluginsStart = readmeContent.indexOf(`### [${title}`);
-        if (pluginsStart === -1) {
-            console.error(`Section ${title} not found in ${readmePath}`);
-            continue;
-        }
-
-        let nextSectionStart = readmeContent.indexOf('\n### [', pluginsStart + 1);
-        if (nextSectionStart === -1) {
-            nextSectionStart = readmeContent.length;
-        }
-
-        const updatedContent =
-            readmeContent.slice(0, pluginsStart) +
-            content +
-            readmeContent.slice(nextSectionStart);
-
-        fs.writeFileSync(readmePath, updatedContent, 'utf-8');
-        console.log(`${readmePath} has been updated, section ${title} has been completely replaced.`);
+    const pluginsStart = readmeContent.indexOf(`### [${title}`);
+    if (pluginsStart === -1) {
+        console.error(`Section ${title} not found`);
+        return;
     }
+
+    let nextSectionStart = readmeContent.indexOf('\n### [', pluginsStart + 1);
+    if (nextSectionStart === -1) {
+        nextSectionStart = readmeContent.length;
+    }
+
+    const updatedContent =
+        readmeContent.slice(0, pluginsStart) +
+        content +
+        readmeContent.slice(nextSectionStart);
+
+    fs.writeFileSync(readmePath, updatedContent, 'utf-8');
+    console.log(`README.md has been updated, section ${title} has been completely replaced.`);
 }
 
 // Generate plugin table
