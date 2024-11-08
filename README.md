@@ -20,8 +20,7 @@ This project organizes the BaaS (Backend as a Service) platforms and their plugi
 - Advantages:
   - Open source, can be self-hosted
   - Comprehensive support across all platforms
-  - Native support for PostgreSQL
-  - Compatible with Firebase's API
+  - Support for PostgreSQL
 - Disadvantages:
   - Some advanced features are still under development
   - Relatively smaller community
@@ -100,3 +99,31 @@ The absence of certain features does not imply weakness in BaaS capabilities, as
 | [![supabase pub.dev badge](https://img.shields.io/pub/v/supabase.svg)](https://pub.dev/packages/supabase) | [`supabase`](https://github.com/supabase/supabase-flutter/tree/main/packages/supabase) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | [![supabase_flutter pub.dev badge](https://img.shields.io/pub/v/supabase_flutter.svg)](https://pub.dev/packages/supabase_flutter) | [`supabase_flutter`](https://github.com/supabase/supabase-flutter/tree/main/packages/supabase_flutter) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | [![yet_another_json_isolate pub.dev badge](https://img.shields.io/pub/v/yet_another_json_isolate.svg)](https://pub.dev/packages/yet_another_json_isolate) | [`yet_another_json_isolate`](https://github.com/supabase/supabase-flutter/tree/main/packages/yet_another_json_isolate) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+
+### [AWS Amplify Plugins](https://docs.amplify.aws/flutter)
+
+| pub.dev | View Source | Android | iOS | Web | MacOS | Windows | Linux |
+| ------- | ----------- | ------- | --- | --- | ----- | ------- | ----- |
+| [![amplify_flutter pub.dev badge](https://img.shields.io/pub/v/amplify_flutter.svg)](https://pub.dev/packages/amplify_flutter) | [`amplify_flutter`](https://github.com/aws-amplify/amplify-flutter/tree/main/packages/amplify_flutter) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| [![amplify_core pub.dev badge](https://img.shields.io/pub/v/amplify_core.svg)](https://pub.dev/packages/amplify_core) | [`amplify_core`](https://github.com/aws-amplify/amplify-flutter/tree/main/packages/amplify_core) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| [![amplify_datastore pub.dev badge](https://img.shields.io/pub/v/amplify_datastore.svg)](https://pub.dev/packages/amplify_datastore) | [`amplify_datastore`](https://github.com/aws-amplify/amplify-flutter/tree/main/packages/amplify_datastore) | ✔ | ✔ | N/A | N/A | N/A | N/A |
+| [![amplify_analytics_pinpoint pub.dev badge](https://img.shields.io/pub/v/amplify_analytics_pinpoint.svg)](https://pub.dev/packages/amplify_analytics_pinpoint) | [`amplify_analytics_pinpoint`](https://github.com/aws-amplify/amplify-flutter/tree/main/packages/amplify_analytics_pinpoint) | ✔ | N/A | N/A | N/A | N/A | N/A |
+| [![amplify_api pub.dev badge](https://img.shields.io/pub/v/amplify_api.svg)](https://pub.dev/packages/amplify_api) | [`amplify_api`](https://github.com/aws-amplify/amplify-flutter/tree/main/packages/amplify_api) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| [![amplify_auth_cognito pub.dev badge](https://img.shields.io/pub/v/amplify_auth_cognito.svg)](https://pub.dev/packages/amplify_auth_cognito) | [`amplify_auth_cognito`](https://github.com/aws-amplify/amplify-flutter/tree/main/packages/amplify_auth_cognito) | ✔ | ✔ | N/A | ✔ | N/A | N/A |
+| [![amplify_authenticator pub.dev badge](https://img.shields.io/pub/v/amplify_authenticator.svg)](https://pub.dev/packages/amplify_authenticator) | [`amplify_authenticator`](https://github.com/aws-amplify/amplify-flutter/tree/main/packages/amplify_authenticator) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| [![amplify_storage_s3 pub.dev badge](https://img.shields.io/pub/v/amplify_storage_s3.svg)](https://pub.dev/packages/amplify_storage_s3) | [`amplify_storage_s3`](https://github.com/aws-amplify/amplify-flutter/tree/main/packages/amplify_storage_s3) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+
+## Future Plans
+
+1. Provide migration guides between popular platforms
+2. Implement a Firebase example project with switchable backends
+3. Supplement more comparison information for BaaS platforms
+4. Add performance and cost comparison data
+
+## Contribution
+
+Contributions through Issues and PRs are welcome to improve this project.
+
+## License
+
+MIT License

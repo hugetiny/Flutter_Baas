@@ -20,15 +20,14 @@
 - 优势：
   - 开源，可自部署
   - 全平台支持完善
-  - PostgreSQL 原生支持
-  - 兼容 Firebase 的 API
+  - PostgreSQL支持
 - 劣势：
   - 部分高级功能仍在开发中
   - 社区相对较小
 
 ### Appwrite
 - 优势：
-  - 完全开源，可自部署
+  - 开源，可自部署
   - 功能相对完整
 - 劣势：
   - Flutter 插件维护不够活跃
@@ -100,3 +99,31 @@
 | [![supabase pub.dev badge](https://img.shields.io/pub/v/supabase.svg)](https://pub.dev/packages/supabase) | [`supabase`](https://github.com/supabase/supabase-flutter/tree/main/packages/supabase) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | [![supabase_flutter pub.dev badge](https://img.shields.io/pub/v/supabase_flutter.svg)](https://pub.dev/packages/supabase_flutter) | [`supabase_flutter`](https://github.com/supabase/supabase-flutter/tree/main/packages/supabase_flutter) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | [![yet_another_json_isolate pub.dev badge](https://img.shields.io/pub/v/yet_another_json_isolate.svg)](https://pub.dev/packages/yet_another_json_isolate) | [`yet_another_json_isolate`](https://github.com/supabase/supabase-flutter/tree/main/packages/yet_another_json_isolate) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+
+### [AWS Amplify Plugins](https://docs.amplify.aws/flutter)
+
+| pub.dev | View Source | Android | iOS | Web | MacOS | Windows | Linux |
+| ------- | ----------- | ------- | --- | --- | ----- | ------- | ----- |
+| [![amplify_flutter pub.dev badge](https://img.shields.io/pub/v/amplify_flutter.svg)](https://pub.dev/packages/amplify_flutter) | [`amplify_flutter`](https://github.com/aws-amplify/amplify-flutter/tree/main/packages/amplify_flutter) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| [![amplify_core pub.dev badge](https://img.shields.io/pub/v/amplify_core.svg)](https://pub.dev/packages/amplify_core) | [`amplify_core`](https://github.com/aws-amplify/amplify-flutter/tree/main/packages/amplify_core) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| [![amplify_datastore pub.dev badge](https://img.shields.io/pub/v/amplify_datastore.svg)](https://pub.dev/packages/amplify_datastore) | [`amplify_datastore`](https://github.com/aws-amplify/amplify-flutter/tree/main/packages/amplify_datastore) | ✔ | ✔ | N/A | N/A | N/A | N/A |
+| [![amplify_analytics_pinpoint pub.dev badge](https://img.shields.io/pub/v/amplify_analytics_pinpoint.svg)](https://pub.dev/packages/amplify_analytics_pinpoint) | [`amplify_analytics_pinpoint`](https://github.com/aws-amplify/amplify-flutter/tree/main/packages/amplify_analytics_pinpoint) | ✔ | N/A | N/A | N/A | N/A | N/A |
+| [![amplify_api pub.dev badge](https://img.shields.io/pub/v/amplify_api.svg)](https://pub.dev/packages/amplify_api) | [`amplify_api`](https://github.com/aws-amplify/amplify-flutter/tree/main/packages/amplify_api) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| [![amplify_auth_cognito pub.dev badge](https://img.shields.io/pub/v/amplify_auth_cognito.svg)](https://pub.dev/packages/amplify_auth_cognito) | [`amplify_auth_cognito`](https://github.com/aws-amplify/amplify-flutter/tree/main/packages/amplify_auth_cognito) | ✔ | ✔ | N/A | ✔ | N/A | N/A |
+| [![amplify_authenticator pub.dev badge](https://img.shields.io/pub/v/amplify_authenticator.svg)](https://pub.dev/packages/amplify_authenticator) | [`amplify_authenticator`](https://github.com/aws-amplify/amplify-flutter/tree/main/packages/amplify_authenticator) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| [![amplify_storage_s3 pub.dev badge](https://img.shields.io/pub/v/amplify_storage_s3.svg)](https://pub.dev/packages/amplify_storage_s3) | [`amplify_storage_s3`](https://github.com/aws-amplify/amplify-flutter/tree/main/packages/amplify_storage_s3) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+
+## 未来计划
+
+1. 提供流行平台之间的迁移指南
+2. 实现一个具有可切换后端的 Firebase 示例项目
+3. 补充更多 BaaS 平台的比较信息
+4. 添加性能和成本比较数据
+
+## 贡献
+
+欢迎通过 Issues 和 PR 贡献来改善这个项目。
+
+## 许可证
+
+MIT 许可证
