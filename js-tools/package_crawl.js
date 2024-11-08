@@ -31,7 +31,7 @@ const PUBLISHERS = [
         branch: 'main',
         validPackages: [
             'amplify_analytics_pinpoint', 'amplify_api', 'amplify_auth_cognito',
-            'amplify_authenticator', 'amplify_core', 'amplify_datastore',
+            'amplify_authenticator', 'amplify_push_notifications', 'amplify_datastore',
             'amplify_flutter', 'amplify_storage_s3'
         ],
         packageType: 'whitelist'
@@ -59,20 +59,20 @@ class GitHubService {
 class PackageService {
     static async fetchGithubPackages(apiUrl, publisher) {
         try {
-            const directories = await GitHubService.fetchDirectories(apiUrl);
             let allPackages = [];
 
             switch (publisher.packageType) {
                 case 'root-level':
+                    const directories = await GitHubService.fetchDirectories(apiUrl);
                     allPackages = directories.map(dir => dir.name);
                     break;
 
                 case 'nested-same-name':
-                    allPackages = await this.handleNestedSameNamePackages(apiUrl, directories);
+                    allPackages = await this.handleNestedSameNamePackages(apiUrl);
                     break;
 
                 case 'whitelist':
-                    allPackages = await this.handleWhitelistPackages(apiUrl, directories, publisher.validPackages);
+                    allPackages = await this.handleWhitelistPackages(publisher);
                     break;
             }
 
@@ -83,8 +83,10 @@ class PackageService {
         }
     }
 
-    static async handleNestedSameNamePackages(apiUrl, directories) {
+    static async handleNestedSameNamePackages(apiUrl) {
         const packages = [];
+        const directories = await GitHubService.fetchDirectories(apiUrl);
+
         for (const dir of directories) {
             try {
                 const subDirectories = await GitHubService.fetchSubDirectories(apiUrl, dir.name);
@@ -101,26 +103,42 @@ class PackageService {
         return packages;
     }
 
-    static async handleWhitelistPackages(apiUrl, directories, validPackages) {
+    static async handleWhitelistPackages(publisher) {
         const packages = [];
-        for (const dir of directories) {
-            if (validPackages?.includes(dir.name)) {
-                packages.push(dir.name);
-                continue;
-            }
+        const [owner, repo] = publisher.apiBase.split('github.com/repos/')[1].split('/contents')[0].split('/');
 
+        for (const packageName of publisher.validPackages) {
             try {
-                const subDirectories = await GitHubService.fetchSubDirectories(apiUrl, dir.name);
-                for (const subDir of subDirectories) {
-                    if (validPackages?.includes(subDir.name)) {
-                        packages.push({ name: subDir.name, parentDir: dir.name });
+                // 使用 GitHub API 搜索文件夹
+                const searchUrl = `https://api.github.com/search/code?q=path:packages+filename:pubspec.yaml+repo:${owner}/${repo}`;
+                const response = await axios.get(searchUrl);
+
+                // 在搜索结果中查找匹配的包
+                const matchingFile = response.data.items.find(item =>
+                    item.path.endsWith(`/${packageName}/pubspec.yaml`)
+                );
+
+                if (matchingFile) {
+                    // 从路径中提取父目录
+                    const fullPath = matchingFile.path;
+                    const parentPath = fullPath.substring('packages/'.length, fullPath.lastIndexOf('/'));
+
+                    if (parentPath === packageName) {
+                        packages.push(packageName);
+                    } else {
+                        packages.push({
+                            name: packageName,
+                            parentDir: parentPath
+                        });
                     }
                 }
-                await this.delay();
+
+                await this.delay(1000); // GitHub Search API 有更严格的速率限制
             } catch (error) {
-                console.log(`Skipping subdirectory scan for ${dir.name}: ${error.message}`);
+                console.log(`Error searching for package ${packageName}: ${error.message}`);
             }
         }
+
         return packages;
     }
 
@@ -237,7 +255,7 @@ async function generateTable(publisher) {
             const packageData = await PackageService.fetchPackageInfo(publisher, packageInfo);
             if (packageData) {
                 packages.push(packageData);
-                await PackageService.delay(200);
+                await PackageService.delay(500);
             }
         }
 
