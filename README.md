@@ -4,6 +4,7 @@
 
 This project organizes the BaaS (Backend as a Service) platforms and their plugin support in the Flutter ecosystem, helping developers with technology selection and service migration.
 
+## Plugin Cross-Platform Support Monitoring (Updated Weekly)
 
 ### [Firebase Plugins](https://firebase.google.com/docs/flutter)
 
@@ -119,7 +120,6 @@ This project organizes various popular BaaS platform plugins for Flutter, making
 
 The absence of certain features does not imply weakness in BaaS capabilities, as third-party plugins or APIs from other services can supplement them.
 
-## Plugin Cross-Platform Support Monitoring (Updated Weekly)
 
 ## Contribution
 
