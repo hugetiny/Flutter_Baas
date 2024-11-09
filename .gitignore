@@ -1,13 +1,8 @@
-./appwrite-sdk
-./pocketbase-sdk
-./supabase-sdk
+appwrite-sdk/
+pocketbase-sdk/
+supabase-sdk/
+flutterfire/
+snippets-flutter/
+
 
 **/node_modules/
-
-
-pubspec.lock
-
-
-js-tools/pnpm-lock.yaml
-js-tools/aws_crawl.js
-js-tools/raw
