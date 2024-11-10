@@ -18,7 +18,9 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd js-tools
+          npm install
 
       - name: Run package_crawl.js
         run: node js-tools/package_crawl.js
